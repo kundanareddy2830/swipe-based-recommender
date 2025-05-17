@@ -1,5 +1,131 @@
-.App {
-  font-family: Arial, sans-serif;
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background: rgba(255, 255, 255, 0.75);
+  width: 380px;
+  max-width: 95vw;
+  padding: 38px 30px 32px 30px;
+  border-radius: 22px;
+  box-shadow: 0 12px 32px 0 rgba(60, 72, 100, 0.18), 0 1.5px 4px 0 rgba(60, 72, 100, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(120, 144, 156, 0.13);
+  transition: box-shadow 0.3s;
+}
+
+.app-container:hover {
+  box-shadow: 0 18px 40px 0 rgba(60, 72, 100, 0.22), 0 2px 8px 0 rgba(60, 72, 100, 0.10);
+}
+
+.card {
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(60, 72, 100, 0.13);
+  padding: 28px 22px 24px 22px;
+  margin-bottom: 28px;
+  border: 1.5px solid #e3e8ee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  box-shadow: 0 14px 36px rgba(60, 72, 100, 0.18);
+}
+
+.title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #2d314d;
   text-align: center;
-  padding: 20px;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 1.08rem;
+  color: #5c627a;
+  margin-bottom: 28px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 14px 34px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  color: white;
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  box-shadow: 0 4px 18px rgba(60, 72, 100, 0.10);
+  transition: background 0.3s, transform 0.2s;
+  user-select: none;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn.like {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.btn.like:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn.dislike {
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+}
+
+.btn.dislike:hover {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Smooth fade animation for card transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 400ms, transform 400ms;
 }
