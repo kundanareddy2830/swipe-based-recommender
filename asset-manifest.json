@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/swipe-based-recommender/static/css/main.edc95997.css",
+    "main.js": "/swipe-based-recommender/static/js/main.d31f615f.js",
+    "index.html": "/swipe-based-recommender/index.html",
+    "main.edc95997.css.map": "/swipe-based-recommender/static/css/main.edc95997.css.map",
+    "main.d31f615f.js.map": "/swipe-based-recommender/static/js/main.d31f615f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edc95997.css",
+    "static/js/main.d31f615f.js"
+  ]
+}
