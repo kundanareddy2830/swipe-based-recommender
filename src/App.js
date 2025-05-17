@@ -366,6 +366,7 @@ function App() {
   const [showSubjectFilter, setShowSubjectFilter] = useState(false);
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [showSwipeTutorial, setShowSwipeTutorial] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   
   // Study tips for the random tip feature
   const studyTips = [
